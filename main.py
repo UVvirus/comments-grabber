@@ -3,14 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from bs4 import BeautifulSoup,Comment
-"""""
-browser=webdriver.Chrome("/usr/local/bin/chromedriver")
-
-#browser.maximize_window()
-browser.get("http://scanme.nmap.org/")
-tst=browser.find_element(By.TAG_NAME("head")).send_keys(Keys.F12)
-
-"""""
+import argparse
 
 def page_source():
     try:
@@ -41,4 +34,12 @@ def page_source():
     except NoSuchElementException as e:
         print(e)
 
-page_source()
+#page_source()
+
+if __name__ == '__main__':
+        parser=argparse.ArgumentParser(usage="python3 c.py http://siteName.com",
+        description="Description:This program grabs comments from "
+                    "source code of a website")
+        args=parser.parse_args()
+        #parser.add_argument('-c','comment',)
+        page_source()
