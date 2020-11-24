@@ -15,7 +15,7 @@ tst=browser.find_element(By.TAG_NAME("head")).send_keys(Keys.F12)
 def page_source():
     try:
         driver=webdriver.Chrome("/usr/local/bin/chromedriver")
-        url="scanme.nmap.org"
+        url="http://scanme.nmap.org"
         driver.get(url)
         soup=BeautifulSoup(driver.page_source,'html.parser')
 
