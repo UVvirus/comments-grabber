@@ -7,8 +7,9 @@ import argparse
 
 def page_source():
     try:
+        url=input('Enter the site:')
         driver=webdriver.Chrome("/usr/local/bin/chromedriver")
-        url="http://scanme.nmap.org"
+        #url="http://scanme.nmap.org"
         driver.get(url)
         soup=BeautifulSoup(driver.page_source,'html.parser')
 
