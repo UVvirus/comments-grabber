@@ -10,6 +10,8 @@ selenium = "*"
 beautifulsoup4 = "*"
 beautifulsoup = "*"
 bs4 = "*"
+requests = "*"
+pygithub = "*"
 
 [requires]
 python_version = "3.6"
