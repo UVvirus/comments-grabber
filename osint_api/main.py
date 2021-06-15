@@ -22,7 +22,7 @@ def github(name):
     print("working")
     page=requests.get(url)
     soup=BeautifulSoup(page.content,'html.parser')
-
+    print("su",soup)
     sys.stdout= open('output.csv','w')
     print(soup.text)
     #sys.stdout.close()

@@ -5,9 +5,20 @@ from selenium.common.exceptions import NoSuchElementException
 from bs4 import BeautifulSoup,Comment
 import argparse
 
+
+
+"""""
+  prerequisites:
+             1)chrome driver with correct chrome version
+             2)Driver should be located in /usr/local/bin
+"""""
+
+
 def page_source():
     try:
         url=input('Enter the site:')
+
+
         driver=webdriver.Chrome("/usr/local/bin/chromedriver")
         #url="http://scanme.nmap.org"
         driver.get(url)
@@ -40,7 +51,10 @@ def page_source():
 if __name__ == '__main__':
         parser=argparse.ArgumentParser(usage="python3 c.py http://siteName.com",
         description="Description:This program grabs comments from "
-                    "source code of a website")
+                    "source code of a website \n"
+                    "prerequisites:\n"
+                    "1)chrome driver with correct chrome version\n"
+                    "2)Driver should be located in /usr/local/bin")
         args=parser.parse_args()
         #parser.add_argument('-c','comment',)
         page_source()
